@@ -31,14 +31,14 @@
   </div>
 </nav>
 
+<div class="container">
+  <% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "alert alert-#{key}" %>
+  <% end %>
 
-<div class="container"?
-<=% yield %>
+  <%= yield %>
 </div>
 
-
-
-<%= yield %>
 
 </body>
 </html>
